@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "generated/prisma"
+  output   = "generated"
 }
 
 datasource db {
@@ -9,16 +9,16 @@ datasource db {
 }
 
 model User {
-  id              Int      @id @default(autoincrement())
-  uid             String?  @unique  // Optional but recommended to have
-  name            String?
-  email           String   @unique
-  password        String
-  stripeId        String?
-  isPaymentSetup  Boolean  @default(false)
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
-  payments        Payment[]
+  name           String?
+  email          String    @unique
+  password       String
+  stripeId       String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  id             Int       @id @default(autoincrement())
+  isPaymentSetup Boolean   @default(false)
+  uid            String?   @unique
+  payments       Payment[]
 }
 
 model Payment {
@@ -29,4 +29,3 @@ model Payment {
   transactionId String
   user          User     @relation(fields: [userId], references: [id])
 }
-
