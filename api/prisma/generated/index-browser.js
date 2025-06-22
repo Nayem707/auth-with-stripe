@@ -121,15 +121,15 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
 });
 
 exports.Prisma.UserScalarFieldEnum = {
-  id: 'id',
-  uid: 'uid',
   name: 'name',
   email: 'email',
   password: 'password',
   stripeId: 'stripeId',
-  isPaymentSetup: 'isPaymentSetup',
   createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  updatedAt: 'updatedAt',
+  id: 'id',
+  isPaymentSetup: 'isPaymentSetup',
+  uid: 'uid'
 };
 
 exports.Prisma.PaymentScalarFieldEnum = {
