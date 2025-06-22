@@ -1,6 +1,7 @@
-const prisma = require('../config/prisma.config');
+const { PrismaClient } = require('@prisma/client');
 const stripe = require('../config/stripe.config');
 
+const prisma = new PrismaClient();
 const createCustomer = async (customerData) => {
   return await stripe.customers.create(customerData);
 };
