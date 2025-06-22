@@ -1,7 +1,6 @@
-const { PrismaClient } = require('@prisma/client');
+const prisma = require('../config/prisma.config');
 const stripeService = require('./stripe.service');
 
-const prisma = new PrismaClient();
 const findUserByEmail = async (email) => {
   return await prisma.user.findUnique({ where: { email } });
 };
