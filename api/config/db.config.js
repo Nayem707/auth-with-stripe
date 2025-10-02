@@ -1,4 +1,5 @@
-const prisma = require('./prisma.config');
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
 const connectDB = async () => {
   try {

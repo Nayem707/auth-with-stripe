@@ -143,7 +143,11 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
+<<<<<<<< HEAD:api/prisma/generated/prisma/edge.js
       "value": "C:\\Users\\HP\\Documents\\GitHub\\auth-with-stripe\\api\\prisma\\generated\\prisma",
+========
+      "value": "C:\\Users\\HP\\Desktop\\auth-with-stripe\\api\\generated",
+>>>>>>>> c07f164807b01ffc4a1047620d9355b6d0bfb1ea:api/generated/edge.js
       "fromEnvVar": null
     },
     "config": {
@@ -157,14 +161,21 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\HP\\Documents\\GitHub\\auth-with-stripe\\api\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\HP\\Desktop\\auth-with-stripe\\api\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
+<<<<<<<< HEAD:api/prisma/generated/prisma/edge.js
     "rootEnvPath": "../../../.env",
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../..",
+========
+    "rootEnvPath": "../.env",
+    "schemaEnvPath": "../.env"
+  },
+  "relativePath": "../prisma",
+>>>>>>>> c07f164807b01ffc4a1047620d9355b6d0bfb1ea:api/generated/edge.js
   "clientVersion": "6.10.1",
   "engineVersion": "9b628578b3b7cae625e8c927178f15a170e74a9c",
   "datasourceNames": [
@@ -180,8 +191,13 @@ const config = {
       }
     }
   },
+<<<<<<<< HEAD:api/prisma/generated/prisma/edge.js
   "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  name           String?\n  email          String    @unique\n  password       String\n  stripeId       String?\n  createdAt      DateTime  @default(now())\n  updatedAt      DateTime  @updatedAt\n  id             Int       @id @default(autoincrement())\n  isPaymentSetup Boolean   @default(false)\n  uid            String?   @unique\n  payments       Payment[]\n}\n\nmodel Payment {\n  id            Int      @id @default(autoincrement())\n  userId        Int\n  amount        Float\n  paymentDate   DateTime\n  transactionId String\n  user          User     @relation(fields: [userId], references: [id])\n}\n",
   "inlineSchemaHash": "0ea34fc9a8b3a88719ed7c2024665c8fb28620e65c7b1680313ca2c58361a134",
+========
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  name           String?\n  email          String    @unique\n  password       String\n  stripeId       String?\n  createdAt      DateTime  @default(now())\n  updatedAt      DateTime  @updatedAt\n  id             Int       @id @default(autoincrement())\n  isPaymentSetup Boolean   @default(false)\n  uid            String?   @unique\n  payments       Payment[]\n}\n\nmodel Payment {\n  id            Int      @id @default(autoincrement())\n  userId        Int\n  amount        Float\n  paymentDate   DateTime\n  transactionId String\n  user          User     @relation(fields: [userId], references: [id])\n}\n",
+  "inlineSchemaHash": "ac85b76ef9b2e31d12a2e353fd9f4148f5a00409ee3ab8bc17905a4c7f3e52a2",
+>>>>>>>> c07f164807b01ffc4a1047620d9355b6d0bfb1ea:api/generated/edge.js
   "copyEngine": true
 }
 config.dirname = '/'

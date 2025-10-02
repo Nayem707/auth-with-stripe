@@ -144,7 +144,11 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
+<<<<<<<< HEAD:api/prisma/generated/prisma/index.js
       "value": "C:\\Users\\HP\\Documents\\GitHub\\auth-with-stripe\\api\\prisma\\generated\\prisma",
+========
+      "value": "C:\\Users\\HP\\Desktop\\auth-with-stripe\\api\\generated",
+>>>>>>>> c07f164807b01ffc4a1047620d9355b6d0bfb1ea:api/generated/index.js
       "fromEnvVar": null
     },
     "config": {
@@ -158,14 +162,21 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\HP\\Documents\\GitHub\\auth-with-stripe\\api\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\HP\\Desktop\\auth-with-stripe\\api\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
+<<<<<<<< HEAD:api/prisma/generated/prisma/index.js
     "rootEnvPath": "../../../.env",
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../..",
+========
+    "rootEnvPath": "../.env",
+    "schemaEnvPath": "../.env"
+  },
+  "relativePath": "../prisma",
+>>>>>>>> c07f164807b01ffc4a1047620d9355b6d0bfb1ea:api/generated/index.js
   "clientVersion": "6.10.1",
   "engineVersion": "9b628578b3b7cae625e8c927178f15a170e74a9c",
   "datasourceNames": [
@@ -181,8 +192,13 @@ const config = {
       }
     }
   },
+<<<<<<<< HEAD:api/prisma/generated/prisma/index.js
   "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  name           String?\n  email          String    @unique\n  password       String\n  stripeId       String?\n  createdAt      DateTime  @default(now())\n  updatedAt      DateTime  @updatedAt\n  id             Int       @id @default(autoincrement())\n  isPaymentSetup Boolean   @default(false)\n  uid            String?   @unique\n  payments       Payment[]\n}\n\nmodel Payment {\n  id            Int      @id @default(autoincrement())\n  userId        Int\n  amount        Float\n  paymentDate   DateTime\n  transactionId String\n  user          User     @relation(fields: [userId], references: [id])\n}\n",
   "inlineSchemaHash": "0ea34fc9a8b3a88719ed7c2024665c8fb28620e65c7b1680313ca2c58361a134",
+========
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  name           String?\n  email          String    @unique\n  password       String\n  stripeId       String?\n  createdAt      DateTime  @default(now())\n  updatedAt      DateTime  @updatedAt\n  id             Int       @id @default(autoincrement())\n  isPaymentSetup Boolean   @default(false)\n  uid            String?   @unique\n  payments       Payment[]\n}\n\nmodel Payment {\n  id            Int      @id @default(autoincrement())\n  userId        Int\n  amount        Float\n  paymentDate   DateTime\n  transactionId String\n  user          User     @relation(fields: [userId], references: [id])\n}\n",
+  "inlineSchemaHash": "ac85b76ef9b2e31d12a2e353fd9f4148f5a00409ee3ab8bc17905a4c7f3e52a2",
+>>>>>>>> c07f164807b01ffc4a1047620d9355b6d0bfb1ea:api/generated/index.js
   "copyEngine": true
 }
 
@@ -191,8 +207,13 @@ const fs = require('fs')
 config.dirname = __dirname
 if (!fs.existsSync(path.join(__dirname, 'schema.prisma'))) {
   const alternativePaths = [
+<<<<<<<< HEAD:api/prisma/generated/prisma/index.js
     "prisma/generated/prisma",
     "generated/prisma",
+========
+    "generated",
+    "",
+>>>>>>>> c07f164807b01ffc4a1047620d9355b6d0bfb1ea:api/generated/index.js
   ]
   
   const alternativePath = alternativePaths.find((altPath) => {
@@ -222,7 +243,14 @@ Object.assign(exports, Prisma)
 
 // file annotations for bundling tools to include these files
 path.join(__dirname, "query_engine-windows.dll.node");
+<<<<<<<< HEAD:api/prisma/generated/prisma/index.js
 path.join(process.cwd(), "prisma/generated/prisma/query_engine-windows.dll.node")
 // file annotations for bundling tools to include these files
 path.join(__dirname, "schema.prisma");
 path.join(process.cwd(), "prisma/generated/prisma/schema.prisma")
+========
+path.join(process.cwd(), "generated/query_engine-windows.dll.node")
+// file annotations for bundling tools to include these files
+path.join(__dirname, "schema.prisma");
+path.join(process.cwd(), "generated/schema.prisma")
+>>>>>>>> c07f164807b01ffc4a1047620d9355b6d0bfb1ea:api/generated/index.js
